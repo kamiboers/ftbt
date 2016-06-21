@@ -1,0 +1,113 @@
+#backstretch1 {
+  left: 0px; 
+  top: 0px; 
+  z-index: -999999; 
+  margin: 0px; 
+  padding: 0px;
+  position: fixed; 
+  overflow: hidden; 
+  height: 100%; 
+  width: 100%;
+  background: url(tatras-slov.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login-box {
+  border-radius: 25px;
+  background-color: #bfbfbf;
+  opacity: 0.5;
+  height: 200px;
+  width: 500px;
+  z-index: 99;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-filter: blur(1.5px);
+  -moz-filter: blur(1.5px);
+  -ms-filter: blur(1.5px);
+  -o-filter: blur(1.5px);
+  filter: blur(1.5px);
+}
+
+.login-blur {
+  border-radius: 25px;
+  background-color: white;
+  opacity: 0.5;
+  height: 198px;
+  width: 498px;
+  z-index: 100;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -ms-filter: blur(8px);
+  -o-filter: blur(8px);
+  filter: blur(8px);
+}
+
+
+.login {
+  text-align: center;
+  margin-top: 40px;
+  height: 200px;
+  width: 500px;
+  opacity: 1;
+  z-index: 101;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+.jump {
+  margin-top: -15px;
+}
+
+.duck {
+  margin-top: 15px;
+}
+
+.float {
+  vertical-align: center;
+}
+
+.bump {
+  margin-top: -5px;
+}
+
+.login-btn-text {
+  font-size: 16px;
+  /*font-family: "Gill Sans", Helvetica, sans-serif;*/
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+}
+
+.welcome-title {
+  font-size: 46px;
+  font-weight: bold;
+  color: #4d4d4d;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btn-login-outline {
+  border-color: black;
+  background: transparent;
+  color: black;
+  border-width: 2px;
+}
+
+.btn-login-outline:hover, .btn-login-outline:focus, .btn-login-outline:active {
+  border-color: #00b3b3;
+}

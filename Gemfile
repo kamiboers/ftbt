@@ -29,7 +29,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 gem 'unicorn'
 gem 'figaro'
+gem 'omniauth-oauth2', '~> 1.3.1'
 gem 'omniauth-fitbit-oauth2'
+gem 'omniauth-spotify'
+gem 'httparty'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -38,6 +41,7 @@ group :development, :test do
   gem 'byebug'
   gem 'capybara'
   gem 'rspec-rails'
+  gem 'pry-rails'
 end
 
 group :development do
