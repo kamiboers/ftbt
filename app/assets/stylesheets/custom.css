@@ -124,8 +124,10 @@
 
 .dash-box {
   border-radius: 25px;
-  background-color: #00111a;
-  opacity: .9;
+  /*background-color: #00111a;*/
+  /*background-color: #151a1e;*/
+  background-color: #262626;
+  opacity: .95;
   margin-top: 30px;
   height: 90%;
   z-index: 101;
@@ -238,8 +240,7 @@
 .chart-box {
    background: #fff;
     border: 1px solid #aaa;
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 20px;
     overflow: hidden;
 }
-
