@@ -13,6 +13,13 @@ window.onload = function () {
 		{
 			// Change type to "bar", "area", "spline", "pie",etc.
 			type: "pie",
+			indexLabelFontColor: "darkgrey", 
+			indexLabelLineColor: "darkgrey",        
+			indexLabelFontWeight: "bold",        
+			indexLabelLineThickness: 1.25,        
+			indexLabelPlacement: "outside",
+			toolTipContent: "{y} cal",
+
 			dataPoints: [
 			<% if @heart_day.high != 0 %>
 				{ label: "peak",  y: <%= @heart_day.high %>  },
