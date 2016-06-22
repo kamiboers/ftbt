@@ -1,0 +1,46 @@
+<script>
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "theme1",//theme1
+		title:{
+			text: "Calories Burned by Intensity",
+			fontFamily: 'Helvetica',
+			fontSize: 28,
+			verticalAlign: "bottom"
+		},
+		animationEnabled: true,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "pie",
+			indexLabelFontColor: "darkgrey", 
+			indexLabelLineColor: "darkgrey",        
+			indexLabelFontWeight: "bold",        
+			indexLabelLineThickness: 1.25,        
+			indexLabelPlacement: "outside",
+			toolTipContent: "{y} cal",
+
+			dataPoints: [
+			<% if @heart_day.high != 0 %>
+				{ label: "peak",  y: <%= @heart_day.high %>  },
+			<% end %>
+			<% if @heart_day.med != 0 %>
+				{ label: "medium", y: <%= @heart_day.med %>  },
+			<% end %>
+			<% if @heart_day.low != 0 %>
+				{ label: "low", y: <%= @heart_day.low %>  },
+			<% end %>
+			<% if @heart_day.rest != 0 %>
+				{ label: "at rest",  y: <%= @heart_day.rest %>, exploded: true, color: "#400080"  }
+			<% end %>
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 350px; width: 100%;" class="chart-round"></div>
+</script>

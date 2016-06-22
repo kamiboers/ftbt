@@ -8,12 +8,13 @@ end
 
 def dashboard
   redirect_to root_url if !current_user
+  @heart_day = current_user.fitbit_data
 end
 
 private
 
 def user_logged_in
-  session[:spotify_login] && session[:fitbit_login]
+  current_user && session[:spotify_login] && session[:fitbit_login]
 end
 
 end

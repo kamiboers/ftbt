@@ -1,0 +1,31 @@
+<div class="list-group">
+	<a href="#" class="list-group-item" id="heart-title">
+		<h3 class="list-group-item-heading">My Heart Rate Activity:</h3>
+		<small class="text-muted hide" id="heart-date">last updated 
+			<%=l @heart_day.date, format: :long %></small> 
+	</a>
+	<a href="#" class="list-group-item heart-data" id="peak-box">
+		<h4 class="list-group-item-heading">Peak Intensity</h4>
+		<p class="list-group-item-text heart-hide hide" id="peak-data">
+			<%= @heart_day.high %> calories burned at a heart rate between 161 and 220 bpm
+		</p>
+	</a>
+	<a href="#" class="list-group-item heart-data" id="med-box">
+		<h4 class="list-group-item-heading">Medium Intensity</h4>
+		<p class="list-group-item-text heart-hide hide" id="med-data">
+			<%= @heart_day.med %> calories burned at a heart rate between 131 and 160 bpm
+		</p>
+	</a>
+	<a href="#" class="list-group-item heart-data" id="low-box">
+		<h4 class="list-group-item-heading">Low Intensity</h4>
+		<p class="list-group-item-text heart-hide hide" id="low-data">
+			<%= @heart_day.low %> calories burned at a heart rate between 96 and 130 bpm
+		</p>
+	</a>
+	<a href="#" class="list-group-item heart-data" id="rest-box">
+		<h4 class="list-group-item-heading">At Rest</h4>
+		<p class="list-group-item-text heart-hide hide" id="rest-data">
+			<%= @heart_day.rest %> calories burned at a heart rate below 95 bpm
+		</p>
+	</a>
+</div>

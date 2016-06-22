@@ -2,11 +2,12 @@
   
   <div class="login-box"></div>
   <div class="login-blur"></div>
-
-  <div class="login">
+	<div class="login-solid">
+  <div class="login animated fadeIn">
   		<span class="welcome-title"><%= @title %></span>
       <%= button_to "#{@path}",  class: "btn btn-lg btn-login-outline login-btn-text" do %><%= @link_text %><%= image_tag( @link_image, width: 20, class: 'bump') %><%= @name %><% end %>
   </div>
+</div>
  
 
 </div>
