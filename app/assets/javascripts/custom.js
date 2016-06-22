@@ -32,6 +32,14 @@ $(document).ready(function(){
            $('#rest-data').hide(500, 'swing');
         }
     );
+     $("#heart-title").hover(
+        function(){
+             timer = setTimeout(function(){ $('#heart-date').show(100, 'swing'); }, 200);
+        }, function(){
+           clearTimeout(timer);
+           $('#heart-date').hide(100, 'swing');
+        }
+    );
 });
 
 // $('#rest-box').hover(

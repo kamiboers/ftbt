@@ -2,41 +2,15 @@
 	<div class="container dash-box">
 		<div class="navbar"><%= image_tag("logo.png", width: "125") %></div>
 		<div class="container-fluid col-md-5 heart-box">
-			<div class="list-group">
-	  			<a href="#" class="list-group-item">
-	    			<h3 class="list-group-item-heading" id="heart">My Heart Rate Activity:</h3>
-	  			</a>
-  				<a href="#" class="list-group-item heart-data" id="peak-box">
-    				<h4 class="list-group-item-heading">Peak Intensity</h4>
-					<p class="list-group-item-text heart-hide hide" id="peak-data">
- 						0 calories burned today at a heart rate between 161 and 220 bpm
-					</p>
-  				</a>
-  				<a href="#" class="list-group-item heart-data" id="med-box">
-    				<h4 class="list-group-item-heading">Medium Intensity</h4>
-					<p class="list-group-item-text heart-hide hide" id="med-data">
- 						0 calories burned today at a heart rate between 131 and 160 bpm
-					</p>
-  				</a>
-  				<a href="#" class="list-group-item heart-data" id="low-box">
-    				<h4 class="list-group-item-heading">Low Intensity</h4>
-					<p class="list-group-item-text heart-hide hide" id="low-data">
- 						0 calories burned today at a heart rate between 96 and 130 bpm
-					</p>
-  				</a>
-  				<a href="#" class="list-group-item heart-data" id="rest-box">
-    				<h4 class="list-group-item-heading">At Rest</h4>
-					<p class="list-group-item-text heart-hide hide" id="rest-data">
- 						0 calories burned today at a heart rate below 95 bpm
-					</p>
-  				</a>
-  			</div>
-  			<div class="card heart-card">Resting Heart Rate: 62 bpm <div id="hvr-pulse">♥</div></div>
- 
- 
-  		</div>
-  		<div class="music-box col-md-7">
-		<span ><%= link_to 'Sign Out', '/logout', class: "btn btn-sm btn-success-outline r-align" %></span>
+			<%= render 'heart_menu' %>
+			<div class="chart-box duck"><%= render 'chart' %></div>
+			<div class="card heart-card">Resting Heart Rate: 
+				<span id="rate-rate"><%= @heart_day.rest_rate %> bpm </span>
+				<span id="hvr-pulse">♥</span>
+			</div>
+		</div>
+		<div class="music-box col-md-7">
+			<span><%= link_to 'Sign Out', '/logout', class: "btn btn-sm btn-success-outline r-align" %></span>
 		</div>
 	</div>
 </div>
