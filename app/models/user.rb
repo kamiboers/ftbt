@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_one :spotify_credential
   has_one :fitbit_credential
+  has_many :playlists
 
   def self.login_with_fitbit(auth)
     user = find_or_create_by( name: auth[:info][:name] )

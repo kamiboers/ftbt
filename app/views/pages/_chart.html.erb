@@ -7,8 +7,8 @@ window.onload = function () {
 			fontFamily: 'Helvetica',
 			fontSize: 26,
 			fontColor: "#4d4d4d",
-			fontWeight: 500,
-			verticalAlign: "bottom"
+			fontWeight: 600,
+			verticalAlign: "top"
 		},
 		animationEnabled: true,   // change to true
 		data: [              
@@ -27,13 +27,13 @@ window.onload = function () {
 				{ label: "peak",  y: <%= @heart_day.high %>  },
 			<% end %>
 			<% if @heart_day.med != 0 %>
-				{ label: "medium", y: <%= @heart_day.med %>  },
+				{ label: "medium", y: <%= @heart_day.med %>, color: "#004080"  },
 			<% end %>
 			<% if @heart_day.low != 0 %>
-				{ label: "low", y: <%= @heart_day.low %>  },
+				{ label: "low", y: <%= @heart_day.low %>, exploded: true, color: "#408000" },
 			<% end %>
 			<% if @heart_day.rest != 0 %>
-				{ label: "at rest",  y: <%= @heart_day.rest %>, exploded: true, color: "#400080"  }
+				{ label: "at rest",  y: <%= @heart_day.rest %>, color: "#800080"  }
 			<% end %>
 			]
 		}
@@ -44,5 +44,5 @@ window.onload = function () {
 </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 350px; width: 100%;" class="chart-round"></div>
+<div id="chartContainer" style="height: 350px; width: 100%; padding: 0px; margin: 0px;" class="chart-round"></div>
 </script>

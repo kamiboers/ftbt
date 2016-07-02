@@ -1,7 +1,7 @@
 <div class="backstretch" id="backstretch2">
 	<div class="container dash-box">
-		<div class="navbar"><%= image_tag("logo.png", width: "125") %></div>
-		<div class="container-fluid col-md-5 heart-box">
+		<div class="navbar"><span class="nav-header">fit</span><span class="nav2">BEAT</span></div>
+		<div class="container-fluid col-md-4 heart-box">
 			<%= render 'heart_menu' %>
 			<div class="chart-box duck"><%= render 'chart' %></div>
 			<div class="card heart-card">Resting Heart Rate: 
@@ -9,8 +9,14 @@
 				<span id="hvr-pulse">♥</span>
 			</div>
 		</div>
-		<div class="music-box col-md-7">
-			<span><%= link_to 'Sign Out', '/logout', class: "btn btn-sm btn-success-outline r-align" %></span>
+		<div class="music-box col-md-8">
+<!-- 			<div class="create-playlist-box">
+				<%= render 'create_playlist' %>
+			</div>
+			<div class="playlist-index">
+				<%= render 'playlist_index' %>
+			</div> -->
+			<span><%= link_to 'Sign Out', '/logout', class: "btn btn-sm btn-info-outline  btn-logout r-align" %></span>
 		</div>
 	</div>
 </div>

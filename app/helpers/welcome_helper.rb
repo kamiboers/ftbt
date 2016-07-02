@@ -2,8 +2,8 @@ module WelcomeHelper
 
 def return_page_content(user, spotify_logged_in, fitbit_logged_in)
   name = ", #{user.name}" if user
-  fitbit_content if !fitbit_logged_in && !spotify_logged_in
-  spotify_content(name) if fitbit_logged_in && !spotify_logged_in
+  fitbit_content if !fitbit_logged_in
+  spotify_content(name) if fitbit_logged_in
 end
 
 def spotify_content(name=nil)

@@ -34,10 +34,10 @@ $(document).ready(function(){
     );
      $("#heart-title").hover(
         function(){
-             timer = setTimeout(function(){ $('#heart-date').show(100, 'swing'); }, 200);
+             timer = setTimeout(function(){ $('#heart-date').show(200, 'swing'); }, 1000);
         }, function(){
            clearTimeout(timer);
-           $('#heart-date').hide(100, 'swing');
+           $('#heart-date').hide(200, 'swing');
         }
     );
 });

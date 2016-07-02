@@ -1,3 +1,14 @@
+.nav-header {
+  font-family: Ubuntu;
+  font-size: 48px;
+  color: #8cd98c;
+}
+.nav2 {
+font-family: Ubuntu;
+  font-size: 48px;
+  color: #008000;
+}
+
 .backstretch {
   left: 0px; 
   top: 0px; 
@@ -128,8 +139,8 @@
   /*background-color: #151a1e;*/
   background-color: #262626;
   opacity: .95;
-  margin-top: 30px;
-  height: 90%;
+  margin-top: 10px;
+  height: 95%;
   z-index: 101;
   overflow-y: scroll;
 }
@@ -145,9 +156,9 @@
 
 .r-align {
   float: right;
-  position: absolute;
+/*  position: absolute;
   right: 40px;
-  bottom: 40px;
+  bottom: 40px;*/
 }
 
 .hide {
@@ -226,7 +237,7 @@
   color: magenta;
 }
 
-.btn-success-outline:hover {
+.btn-logout:hover {
   background-color: transparent;
   border-color: #e6e6e6;
   color: #e6e6e6;
@@ -241,6 +252,17 @@
    background: #fff;
     border: 1px solid #aaa;
     border-radius: 5px;
-    padding: 20px;
+    padding: 0px;
     overflow: hidden;
+}
+
+.form-box {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.txt {
+  width: 90%;
+  display: inline;
 }
