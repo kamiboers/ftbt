@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160625060233) do
+ActiveRecord::Schema.define(version: 20160722051123) do
 
   create_table "fitbit_credentials", force: :cascade do |t|
     t.string   "uid"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160625060233) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "intensity"
   end
 
   add_index "playlists", ["user_id"], name: "index_playlists_on_user_id"

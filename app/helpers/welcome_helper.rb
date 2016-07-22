@@ -1,12 +1,12 @@
 module WelcomeHelper
 
 def return_page_content(user, spotify_logged_in, fitbit_logged_in)
-  name = ", #{user.name}" if user
   fitbit_content if !fitbit_logged_in
-  spotify_content(name) if fitbit_logged_in
+  spotify_content(user) if fitbit_logged_in
 end
 
-def spotify_content(name=nil)
+def spotify_content(user=nil)
+    name = ", #{user.name}" if user
     @title = "Hey#{name}"
     @link_text = "Please sign into "
     @link_image = "spotify-sym.png"

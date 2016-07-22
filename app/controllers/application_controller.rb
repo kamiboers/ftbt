@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :current_user
+  helper_method :refresh_tokens_as_necessary
+  
 
   private
 
@@ -11,8 +13,8 @@ class ApplicationController < ActionController::Base
   end
 
   def refresh_tokens_as_necessary
-    @current_user.verify_fitbit_token
-    @current_user.verify_spotify_token
+    current_user.verify_fitbit_token
+    current_user.verify_spotify_token
   end
 
 end

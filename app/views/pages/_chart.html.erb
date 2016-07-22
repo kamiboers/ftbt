@@ -1,13 +1,15 @@
-<script>
+ <% if @heart_day %>
+ <div class="chart-box duck">
+	<script>
 window.onload = function () {
 	var chart = new CanvasJS.Chart("chartContainer", {
 		theme: "theme1",//theme1
 		title:{
 			text: "Calories Burned by Intensity",
-			fontFamily: 'Helvetica',
-			fontSize: 26,
-			fontColor: "#4d4d4d",
-			fontWeight: 600,
+			fontFamily: 'Ubuntu',
+			fontSize: 24,
+			// fontColor: "#4d4d4d",
+			fontWeight: 400,
 			verticalAlign: "top"
 		},
 		animationEnabled: true,   // change to true
@@ -44,5 +46,7 @@ window.onload = function () {
 </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 350px; width: 100%; padding: 0px; margin: 0px;" class="chart-round"></div>
+<div id="chartContainer" style="height: 285px; width: 100%; padding: 0px; margin: 0px;" class="chart-round"></div>
 </script>
+</div>
+<% end %>

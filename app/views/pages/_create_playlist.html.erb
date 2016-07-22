@@ -1,24 +1,20 @@
-<div class="form-box ">
-	<h3 class="create-heading">Create a New Playlist:</h3>
-		<%= form_for :playlists, class: "form-inline" do |f| %>
-		<div class="input-group">
-      <input type="text" class="form-control txt">
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" role="menu">
-          Intensity
-        </button>
-        <div class="dropdown-menu">
-          <option class="btn dropdown-item" value="high">High</option>
-          <option class="btn dropdown-item" value="med">Med</option>
-          <option class="btn dropdown-item" value="low">Low</option>
-          <option class="btn dropdown-item" value="rest">Rest</option>
-          <div role="separator" class="dropdown-divider"></div>
-          <option class="btn dropdown-item" value="none">None</option>
-        </div>
-    <%= f.submit "Create", class: "btn btn-info btn-create" %>
-    <% end %>
-      </div>
+<div class="create-playlist-box m-bott">
+<div class="form-box">
+	<h4 class="create-heading">Create a New Playlist:</h4>
+		<div class="input-group form-inline">
+
+      <%= text_field_tag :play_name, nil, placeholder: "Playlist Title", class:"form-control txt m-bott" %>
+
+      <%= select_tag "play_intensity", options_for_select(['Intensity:', 'High', 'Med', 'Low', 'Rest', 'None'], 'Intensity:'), class: 'btn btn-primary-outline space' %>
+
+      <%= select_tag "play_genre", options_for_select(['Genre:', 'Ambient', 'Bluegrass', 'Classical', 'Club/Dance', 'Dub', 'Electronic', 'Folk', 'Funk', 'Hip-Hop', 'House', 'Jazz', 'Old-Timey', 'Pop', 'Indie Pop', 'Punk', 'Rap', 'Reggae', 'Rock', 'Indie Rock', 'Salsa', 'Soul', 'Techno'], 'Genre:'), class: 'btn btn-primary-outline' %>
+
+      <%= hidden_field_tag 'user_id', current_user.id %>
+
+      <button id="create_playlist" class="btn btn-primary-outline btn-sm btn-create">Create</button>
+
     </div>
 </div>
 
+</div>
 </div>

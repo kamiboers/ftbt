@@ -1,0 +1,13 @@
+ <% if @heart_day %>
+ <div id="heart-card" class="card form-box2">
+
+	<div class="col-md-6 col-sm-12 col-xs-12">
+		Resting Heart Rate
+	</div> 
+	<div class="col-md-6 col-sm-12 col-xs-12">
+		<div class="rate-rate"><%= @heart_day.rest_rate %></div>
+		bpm ♥
+	</div>
+
+</div>
+<% end %>
