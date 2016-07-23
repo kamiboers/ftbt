@@ -1,3 +1,23 @@
+body {
+    font-family: Ubuntu;
+}
+
+.btn-create {
+  float: right;
+}
+
+.nav-header {
+  font-family: Ubuntu;
+  font-size: 48px;
+  color: #8cd98c;
+}
+
+.nav2 {
+font-family: Ubuntu;
+  font-size: 48px;
+  color: #008000;
+}
+
 .backstretch {
   left: 0px; 
   top: 0px; 
@@ -20,6 +40,7 @@
 
 #backstretch2 {
   background: url(treetops.jpg) no-repeat center center fixed; 
+  opacity: 0.98;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -85,6 +106,10 @@
   margin-top: -15px;
 }
 
+.m-bott {
+  margin-bottom: 10px !important ;
+}
+
 .duck {
   margin-top: 15px;
 }
@@ -99,7 +124,6 @@
 
 .login-btn-text {
   font-size: 16px;
-  /*font-family: "Gill Sans", Helvetica, sans-serif;*/
   font-family: "ABeeZee", sans-serif;
   font-weight: 400;
 }
@@ -124,28 +148,17 @@
 
 .dash-box {
   border-radius: 25px;
-  background-color: #00111a;
-  opacity: .9;
-  margin-top: 30px;
-  height: 90%;
+  background-color: #262626;
+  opacity: .95;
+  margin-top: 05px;
+  height: 98%;
   z-index: 101;
   overflow-y: scroll;
+  /*overflow-y: hidden;*/
 }
-
-/*.dash-blur {
-  border-radius: 25px;
-  background-color: #00111a;
-  opacity: 1;
-  margin-top: 30px;
-  height: 90%;
-  z-index: 100;
-}*/
 
 .r-align {
   float: right;
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
 }
 
 .hide {
@@ -189,57 +202,93 @@
 }
 
 
-.heart-card {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 450;
-  margin-top: 20px;
-  margin-bottom: 60px;
+.btn-logout {
+  border-color: #808080;
+  color: white;
+  width: 50px;
+  font-size: 10px;
+  text-align: left;
+  padding-left: 9px;
+  margin-top: 10px;
 }
 
-#rate-rate {
-  font-weight: 500;
+.btn-logout > a {
+  color: #808080;
 }
 
-#hvr-pulse {
-  font-size: 28px;
-  display: inline-block;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
+.btn-logout > a:hover {
+  text-decoration: none;
+
 }
 
-.heart-card:hover > #hvr-pulse {
-  -webkit-animation-name: hvr-pulse;
-  animation-name: hvr-pulse;
-  -webkit-animation-duration: 1.25s;
-  animation-duration: 1.25s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 4;
-  animation-iteration-count: infinite;
-  color: magenta;
-}
-
-.btn-success-outline:hover {
+.btn-logout:hover {
   background-color: transparent;
   border-color: #e6e6e6;
   color: #e6e6e6;
+  text-decoration: none;
 }
 
 .card:hover {
   background-color: #f5f5f5;
   color: #555;
 }
+.space {
+  margin-right: 10px;
+}
+
+.selector {
+  height: 30px;
+}
+
+.txt {
+  border-color: #006dcc;
+}
 
 .chart-box {
    background: #fff;
     border: 1px solid #aaa;
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 5px;
+    padding: 0px;
     overflow: hidden;
 }
 
+.form-box {
+  color: #006dcc;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 140px;
+}
+.form-box2 {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  min-height: 140px;
+}
+
+div#heart-card {
+  font-size: 24px;
+  text-align: center;
+  vertical-align: center;
+  padding: 15px;
+  height: 152px;
+}
+
+.rate-rate {
+  margin-top: 05px;
+  font-size: 50px;
+  line-height: 80%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.empty {
+  height: 150px;
+  width: 200px;
+  text-align: center;
+  vertical-align: center;
+  padding: 20px;
+  font-size: 26px;
+}

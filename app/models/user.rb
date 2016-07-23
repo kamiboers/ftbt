@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_one :spotify_credential
   has_one :fitbit_credential
+  has_many :playlists
 
   def self.login_with_fitbit(auth)
     user = find_or_create_by( name: auth[:info][:name] )
@@ -34,21 +35,22 @@ class User < ActiveRecord::Base
   end
 
   def verify_spotify_token
-    response = refresh_spotify_token
+    response = refresh_spotify_token if spotify_credential.expiration_date < DateTime.now
     update_spotify_credentials(response) if response
     return self
   end
 
   def verify_fitbit_token
-    response = refresh_fitbit_token
+    response = refresh_fitbit_token if fitbit_credential.expiration_date < DateTime.now
     update_fitbit_credentials(response) if response
     return self
   end
 
   def fitbit_data
     raw_data = FitbitService.get_heart_data(fitbit_credential.uid, fitbit_credential.token)
-    parsed_data = HeartDataParser.new(raw_data).day_array.last
-    # response = parsed_data.day_array.last if parsed_data.day_array
+    
+    parsed_data = HeartDataParser.new(raw_data)
+    response = parsed_data.day_array.last if parsed_data.day_array
   end
 
   def refresh_spotify_token

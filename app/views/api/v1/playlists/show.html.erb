@@ -1,0 +1,6 @@
+<h2><%= @playlist.name %></h2>
+<table class="table">
+<% @playlist.tracks.each do |track| %>
+<tr><td><%= track.name %>><td><%= track.artist %></td></tr>
+<% end %>
+</table>

@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 
   def complete
     current_user.add_data_from_spotify(request.env['omniauth.auth'])
+    session[:user_id] = current_user.id
     session[:spotify] = true
     redirect_to dashboard_path, success: "Welcome to Fitbeat, #{current_user.name}"
   end

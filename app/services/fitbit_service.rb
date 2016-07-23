@@ -1,8 +1,17 @@
 class FitbitService
 
   def self.get_heart_data(uid, token)
-    HTTParty.get "https://api.fitbit.com/1/user/#{uid}/activities/heart/date/today/1w.json", 
-                   headers: {"Authorization" => "Bearer #{token}"}
+    conn = Faraday.new(url: "https://api.fitbit.com") do |f|
+      f.request  :url_encoded             # form-encode POST params
+      f.response :logger                  # log requests to STDOUT
+      f.adapter  Faraday.default_adapter  # make requests with Net::HTTP
+    end
+
+    response = conn.get do |req|
+        req.url "1/user/#{uid}/activities/heart/date/today/1w.json"
+        req.headers["Authorization"] = "Bearer #{token}"
+    end
+
   end
 
   def self.get_refresh_token(token)
